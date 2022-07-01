@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat-app</title>
+    <!-- css links -->
+    <link rel="stylesheet" href="/style.css" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="alert" class="alert alert-success d-none" role="alert">
+      A simple success alert—check it out!
+    </div>
+    <div id="leaveAlert" class="alert alert-danger d-none" role="alert">
+      A simple success alert—check it out!
+    </div>
+    <section class="chat__section">
+      <div class="brand">
+        <h1>LOGO</h1>
+        <div class="online_users">Onine : <span>0</span></div>
+      </div>
+      <div class="message__area">
+        <!-- <div class="message incoming delay">
+          <h4>ChatBot</h4>
+          <p>Hello, this is bot</p>
+        </div> -->
+      </div>
+
+      <div class="input__area">
+        <textarea
+          id="textarea"
+          cols="30"
+          rows="1"
+          placeholder="write a message..."
+        ></textarea>
+        <button class="btn btn-primary">Enter</button>
+      </div>
+    </section>
+
+    <!-- js -->
+    <!-- JavaScript Bundle with Popper -->
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script> -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>

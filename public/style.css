@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: center; */
+  min-height: 100vh;
+  background: #f8f8f8;
+  font-family: "Roboto", sans-serif;
+}
+section.chat__section {
+  margin: 20px auto;
+  width: 800px;
+  max-width: 90%;
+  background: #fff;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.brand {
+  padding: 20px;
+  background: #f1f1f1;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand h1 {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #444;
+  margin-left: 10px;
+}
+.message__area {
+  height: 500px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding-top: 40px;
+}
+
+.message {
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 40px;
+  max-width: 300px;
+  position: relative;
+}
+
+.username {
+  width: auto;
+  margin-bottom: 5px;
+  height: auto;
+}
+
+.incoming {
+  background: #8f8be8;
+  color: #fff;
+  margin-right: auto;
+  width: auto;
+  min-width: 50px;
+}
+.outgoing {
+  background: #e9eafd;
+  color: #787986;
+  margin-left: auto;
+  min-width: 50px;
+}
+.message h4 {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  color: #333;
+  font-size: 14px;
+}
+
+.input__area {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* border: 1px solid gray; */
+  display: flex;
+}
+
+textarea {
+  width: 100%;
+  border: none;
+  padding: 20px;
+  font-size: 16px;
+  outline: none;
+  background: #fbfbfb;
+}
+
+button {
+  display: none;
+}
+
+.hide-alert {
+  animation: hide 1.3s linear;
+}
+
+@keyframes hide {
+  0% {
+    display: block;
+  }
+
+  100% {
+    display: none;
+  }
+}
+
+.trans {
+  animation: transfor 0.3s linear;
+}
+
+@keyframes transfor {
+  0% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+/* responsive code */
+
+@media (max-width: 500px) {
+  body {
+    display: block;
+  }
+  section.chat__section {
+    width: 100%;
+    margin: 15px auto;
+  }
+
+  .brand {
+    background: #8f8be8;
+    color: #fff;
+  }
+
+  /* button {
+    display: inline-block;
+    padding: 0 10px;
+    outline: none;
+    border: none;
+    background: #8f8be8;
+    color: #fff;
+  } */
+
+  .message {
+    max-width: 150px;
+  }
+
+  textarea {
+    font-size: 12px;
+  }
+}
