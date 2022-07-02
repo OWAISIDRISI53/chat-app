@@ -1,6 +1,8 @@
+require("dotenv").config();
+
 function connectDb() {
   const mongoose = require("mongoose");
-  const url = "mongodb://localhost/chat-app";
+  const url = process.env.mongoUrl;
   mongoose.connect(url, { useNewUrlParser: true });
   const connection = mongoose.connection;
 

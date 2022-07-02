@@ -1,18 +1,19 @@
 const express = require("express");
 const app = express();
 
+require("dotenv").config();
 const port = process.env.PORT | 8080;
 app.use(express.static("public"));
 
 app.use(express.json());
-// database
+database;
 
 const dbConnect = require("./db");
 dbConnect();
 
 const ChatModal = require("./models/schema");
 
-// routes
+routes;
 
 app.post("/msg", (req, res) => {
   const chat = new ChatModal({
