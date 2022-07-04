@@ -6,43 +6,43 @@ const port = process.env.PORT | 8080;
 app.use(express.static("public"));
 
 app.use(express.json());
-database;
+// database;
 
 const dbConnect = require("./db");
 dbConnect();
 
 const ChatModal = require("./models/schema");
 
-routes;
+// routes;
 
-app.post("/msg", (req, res) => {
-  const chat = new ChatModal({
-    user: req.body.user,
-    message: req.body.message,
-  });
+// app.post("/msg", (req, res) => {
+//   const chat = new ChatModal({
+//     user: req.body.user,
+//     message: req.body.message,
+//   });
 
-  chat.save().then((response) => {
-    res.send(response);
-  });
-});
+//   chat.save().then((response) => {
+//     res.send(response);
+//   });
+// });
 
-app.get("/msg", (req, res) => {
-  ChatModal.find().then((msg) => {
-    res.send(msg);
-  });
-});
+// app.get("/msg", (req, res) => {
+//   ChatModal.find().then((msg) => {
+//     res.send(msg);
+//   });
+// });
 
-// deleting all users
+// // deleting all users
 
-app.get("/delete", (req, res) => {
-  ChatModal.deleteMany({}, (err, data) => {
-    if (err) {
-      console.log(err);
-    }
+// app.get("/delete", (req, res) => {
+//   ChatModal.deleteMany({}, (err, data) => {
+//     if (err) {
+//       console.log(err);
+//     }
 
-    res.send(data);
-  });
-});
+//     res.send(data);
+//   });
+// });
 
 // creating server
 const server = app.listen(port, () => {

@@ -115,26 +115,26 @@ socket.on("onlineUsers", (users) => {
   online_user.innerHTML = `${users}`;
 });
 
-function syncWithDb(msg) {
-  const headers = {
-    "Content-Type": "application/json",
-  };
+// function syncWithDb(msg) {
+//   const headers = {
+//     "Content-Type": "application/json",
+//   };
 
-  fetch("/msg", { method: "Post", body: JSON.stringify(msg), headers })
-    .then((resp) => resp.json())
-    .then((result) => console.log(result));
-}
+//   fetch("/msg", { method: "Post", body: JSON.stringify(msg), headers })
+//     .then((resp) => resp.json())
+//     .then((result) => console.log(result));
+// }
 
-function fetchChat() {
-  fetch("/msg")
-    .then((resp) => resp.json())
-    .then((result) => {
-      result.forEach((element) => {
-        console.log(element);
-        // element.user = element.;
-        appendMessage(element, "incoming");
-      });
-    });
-}
+// function fetchChat() {
+//   fetch("/msg")
+//     .then((resp) => resp.json())
+//     .then((result) => {
+//       result.forEach((element) => {
+//         console.log(element);
+//         // element.user = element.;
+//         appendMessage(element, "incoming");
+//       });
+//     });
+// }
 
-window.onload = fetchChat;
+// window.onload = fetchChat;
