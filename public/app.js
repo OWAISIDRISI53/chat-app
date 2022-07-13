@@ -76,7 +76,7 @@ function scrollToBottom() {
 
 socket.on("message", (msg) => {
   appendMessage(msg, "incoming");
-  msg.music.play();
+  music.play();
 });
 
 // alert when new user join the chat
@@ -88,7 +88,7 @@ socket.emit("newUserJoin", name);
 
 socket.on("newUserBroad", (usrename) => {
   alertDiv.innerHTML = `${usrename} is Joined`;
-
+  music.play();
   alertDiv.classList.replace("d-none", "d-block");
   music.play();
   setTimeout(() => {
