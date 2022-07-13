@@ -43,9 +43,9 @@ app.get("/delete", (req, res) => {
   });
 });
 
-app.get("/", (req, res) => {
-  res.send("hello this is Owais Idrisi");
-});
+// app.get("/", (req, res) => {
+//   res.send("hello this is Owais Idrisi");
+// });
 // creating server
 const server = app.listen(port, () => {
   console.log(`Listening on port ${port}`);
