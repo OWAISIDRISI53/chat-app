@@ -64,7 +64,7 @@ function appendMessage(msg, type) {
 
   mainDiv.innerHTML = markup;
   messageArea.appendChild(mainDiv);
-  scrollToBottom()
+  scrollToBottom();
 }
 
 function scrollToBottom() {
@@ -137,3 +137,9 @@ function fetchChat() {
 }
 
 window.onload = fetchChat;
+
+setInterval(() => {
+  if (!window.onclick) {
+    window.close();
+  }
+}, 30000);
