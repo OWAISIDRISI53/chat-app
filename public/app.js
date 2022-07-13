@@ -18,7 +18,6 @@ do {
 //if user "ENTER" key then send event called "sendMessage"
 textarea.addEventListener("keyup", (e) => {
   if (e.key === "Enter") {
-    music.play();
     sendMessage(e.target.value);
   }
 });
