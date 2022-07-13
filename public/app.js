@@ -1,4 +1,4 @@
-const socket = io();
+const socket = io("https://chat-app-owais-idrisi.herokuapp.com/");
 
 let music = new Audio("chat_music.mp3");
 
