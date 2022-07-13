@@ -29,8 +29,6 @@ textarea.addEventListener("keyup", (e) => {
 let btn = document.querySelector(".btn");
 
 btn.addEventListener("click", () => {
-  music.play();
-
   sendMessage(textarea.value);
 });
 function sendMessage(message) {
