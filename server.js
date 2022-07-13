@@ -1,8 +1,7 @@
 const express = require("express");
 const app = express();
 
-require("dotenv").config();
-const port = process.env.PORT | 8080;
+const port = process.env.PORT || 8080;
 app.use(express.static("public"));
 
 app.use(express.json());
@@ -15,35 +14,38 @@ const ChatModal = require("./models/schema");
 
 // routes;
 
-// app.post("/msg", (req, res) => {
-//   const chat = new ChatModal({
-//     user: req.body.user,
-//     message: req.body.message,
-//   });
+app.post("/msg", (req, res) => {
+  const chat = new ChatModal({
+    user: req.body.user,
+    message: req.body.message,
+  });
 
-//   chat.save().then((response) => {
-//     res.send(response);
-//   });
-// });
+  chat.save().then((response) => {
+    res.send(response);
+  });
+});
 
-// app.get("/msg", (req, res) => {
-//   ChatModal.find().then((msg) => {
-//     res.send(msg);
-//   });
-// });
+app.get("/msg", (req, res) => {
+  ChatModal.find().then((msg) => {
+    res.send(msg);
+  });
+});
 
-// // deleting all users
+// deleting all users
 
-// app.get("/delete", (req, res) => {
-//   ChatModal.deleteMany({}, (err, data) => {
-//     if (err) {
-//       console.log(err);
-//     }
+app.get("/delete", (req, res) => {
+  ChatModal.deleteMany({}, (err, data) => {
+    if (err) {
+      console.log(err);
+    }
 
-//     res.send(data);
-//   });
-// });
+    res.send(data);
+  });
+});
 
+app.get("/", (req, res) => {
+  res.send("hello this is Owais Idrisi");
+});
 // creating server
 const server = app.listen(port, () => {
   console.log(`Listening on port ${port}`);
