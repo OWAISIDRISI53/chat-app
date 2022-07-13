@@ -63,7 +63,7 @@ function appendMessage(msg, type) {
         <p>${msg.message}</p>`;
 
   mainDiv.innerHTML = markup;
-  messageArea.appendChild(mainDiv);
+  messageArea.prepend(mainDiv);
 }
 
 function scrollToBottom() {
