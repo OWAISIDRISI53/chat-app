@@ -34,7 +34,6 @@ function sendMessage(message) {
   let msg = {
     user: name,
     message: message.trim(),
-    music: music,
   };
 
   // append to dom
