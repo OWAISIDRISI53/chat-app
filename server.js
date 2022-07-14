@@ -27,7 +27,7 @@ app.post("/msg", (req, res) => {
 
 app.get("/msg", (req, res) => {
   ChatModal.find().then((msg) => {
-    res.redirect("/");
+    res.send(msg);
   });
 });
 
