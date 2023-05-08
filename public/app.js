@@ -1,5 +1,6 @@
 // const socket = io();
-const socket = io("https://chat-app-owais-idrisi.herokuapp.com/");
+// const socket = io("https://chat-app-owais-idrisi.herokuapp.com/");
+const socket = io("https://chat-app-cf9r.onrender.com/");
 
 let music = new Audio("chat_music.mp3");
 
